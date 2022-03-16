@@ -1,0 +1,24 @@
+.hang {
+    background: url(../img/hang.jpg), no-repeat, fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: $pd-3 + 50 0;
+    .hang__content {
+        
+        text-align: center;
+        p {
+            letter-spacing: $letter-spacing-0 - 2;
+            font-size: $fs-0 + 3;
+            color: $color-yellow-0;
+            margin-bottom: 0;
+        }
+        h1 {
+            color: $color-white-0;
+            margin-bottom: 0;
+            letter-spacing: $letter-spacing-0 - 3;
+        }
+        .hang_button {
+            margin-top: $mg-4;
+        }
+    }
+}

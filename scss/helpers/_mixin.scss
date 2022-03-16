@@ -1,0 +1,98 @@
+// Create yellow hover
+
+@mixin yellowHover {
+    &:hover {
+        color: $color-yellow-0;
+    }
+}
+
+// decoration for headline each section
+@mixin tittleDecoration {
+    text-align: center;
+    font-size: $fs-3;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: $mg-1;
+    padding-bottom: $mg-3;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 60px;
+        height: 2px;
+        margin-left: -31px;
+        background: #595959;
+    }
+}
+@mixin pDecoration {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    color: $color-gray-0;
+    line-height: $lh-0 - 5;
+}
+
+// space between each sectino
+@mixin spaceBetweenDiv {
+    padding: $pd-3 0;
+}
+
+// create % for skilll
+
+@mixin createPerce {
+    span {
+        background: $color-gray-0;
+        position: absolute;
+        top: -35px;
+        right: -10px;
+        display: inline-block;
+        min-width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        line-height: 25px;
+        padding: 0 8px;
+        text-align: center;
+        letter-spacing: 0;
+        color: $color-white-0;
+        &::before {
+            background: $color-gray-0;
+            position: absolute;
+            bottom: -2px;
+            left: 15px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            content: "";
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// :hover for PORTFOLIO
+
+@mixin portfolioHover {
+    &:hover { 
+
+        color: $color-black-1;
+    }
+}
+
+
+
+@mixin responsive($screen) {
+    // key ở đây là tên giá trị trong array breakpoint
+    // có nghĩa là ' nếu $breakpoints có 1 giá trị tên là screen => true '
+    @if map-has-key($map: $breakpoints, $key: $screen) {
+        // sau đó ta lấy giá trị của key ra bởi hàm get-map
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "`{$screen}` is not valid";
+    }
+}

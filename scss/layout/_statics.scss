@@ -1,0 +1,41 @@
+.statics {
+    background-color: $color-black-5;
+    .statics__content {
+        @include spaceBetweenDiv;
+        .statics__col {
+            padding: 0 $pd-1;
+            .statics__item {
+                width: 100%;
+                text-align: center;
+                color: $color-white-0;
+                .icon {
+                    display: flex;
+                    margin-bottom: $mg-3;
+                    align-items: center;
+                    justify-content: center;
+                    i {
+                        font-size: $fs-4;
+                        padding-right: $pd-0;
+                    }
+                    h1 {
+                        margin-bottom: 0;
+                    }
+                }
+                .text {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    @include responsive ( "medium"){
+        .statics__content { 
+            .statics__col { 
+                .statics__item { 
+                    padding: $pd-1 0;
+                }
+            }
+        }
+    }
+}

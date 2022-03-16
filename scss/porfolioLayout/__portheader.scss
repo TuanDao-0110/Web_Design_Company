@@ -1,0 +1,118 @@
+.portfolioHeader {
+    height: 100px;
+    background-color: #e6e6e6;
+    header {
+        transition: 0.1s;
+        .header__cover {
+            .navbar-brand {
+                background-image: url(../img/logo__black.png);
+                height: 100%;
+                background-size: contain;
+                width: 100px;
+                // background-position: ;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar {
+                .header {
+                    #navbarNav {
+                        justify-content: end;
+                        // justify-content: right;
+                        .navbar-nav {
+                            .nav-item {
+                                &:hover {
+                                    a {
+                                        color: $color-yellow-0;
+                                    }
+                                    .drop__down_1 {
+                                        display: block;
+                                    }
+                                }
+                                .nav-link {
+                                    &.active {
+                                        color: $color-yellow-0;
+                                    }
+                                    // @include yellowHover;
+                                    padding: 0 $pd-0 + 2;
+                                    outline: 0;
+                                    font-weight: $fw-1;
+                                    font-size: $fs-0;
+                                    color: $color-black-0;
+                                }
+                                .drop__down_1 {
+                                    display: none;
+                                    position: absolute;
+                                    padding: 0%;
+                                    top: 100%;
+                                    background-color: $color-white-0;
+                                    box-shadow: 0 0px 2px rgba($color: #000000, $alpha: 0.4);
+                                    li {
+                                        &:hover {
+                                            background-color: $color-yellow-0;
+                                            a {
+                                                color: $color-white-0;
+                                            }
+                                        }
+                                    }
+                                    .drop_right {
+                                        position: relative;
+                                        &:hover {
+                                            .drop_right_chil {
+                                                display: block;
+                                            }
+                                        }
+                                        .drop_right_chil {
+                                            padding: 0%;
+                                            position: absolute;
+                                            background-color: $color-white-0;
+
+                                            box-shadow: 0 0px 2px rgba($color: #000000, $alpha: 0.4);
+                                            left: 100%;
+                                            top: 10%;
+                                            display: none;
+                                            li {
+                                                a {
+                                                    color: $color-black-1;
+                                                }
+                                                &:hover {
+                                                    background-color: $color-yellow-0;
+                                                    a {
+                                                        color: $color-white-0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    li {
+                                        transition: 0.3s;
+                                        cursor: pointer;
+                                        width: 180px;
+                                        padding: 8px 15px 10px 22px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        flex-wrap: nowrap;
+                                        // opacity: 0;
+
+                                        a {
+                                            align-items: center;
+                                            color: $color-black-1;
+                                            font-size: $fs-0 - 1;
+                                            // padding-right: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                height: 100%;
+                padding: 0;
+                margin: 0%;
+                position: relative;
+            }
+        }
+    }
+}

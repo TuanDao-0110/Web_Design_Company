@@ -1,0 +1,81 @@
+.fun {
+    background-image: url(../img/fun.png);
+    .container {
+        @include spaceBetweenDiv;
+        .nav {
+            justify-content: space-between;
+            .nav-item {
+                // margin-right: $mg-0;
+                .nav-link {
+                    cursor: pointer;
+                    position: relative;
+                    transition: 0.3s;
+                    padding: $pd-1 + 5 $pd-1 + 40;
+                    background: rgba(34, 34, 34, 0.05);
+                    i {
+                        font-size: $fs-4;
+                        color: $color-black-1;
+                        &::after {
+                            transition: 0.3s;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 50%;
+                            margin-left: -10px;
+                            content: "";
+                            border-width: 10px 10px 0 10px;
+                            border-style: solid;
+                            border-color: transparent;
+                        }
+                    }
+                    &:hover {
+                        background-color: white;
+                        i::after {
+                            border-color: #fff transparent transparent transparent;
+                        }
+                    }
+                    &.active {
+                        background-color: white;
+                        i {
+                            &::after {
+                                border-color: #fff transparent transparent transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content {
+            .tab-pane {
+                .heading__title {
+                    margin-bottom: $mg-4;
+                    p {
+                        letter-spacing: 2px;
+                        color: $color-gray-0;
+                        font-size: $fs-0 - 3;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("medium") {
+        .container {
+            .nav {
+                .nav-item {
+                    width: 100%;
+                    margin-bottom: $mg-3;
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .container {
+            padding: 0 $pd-0;
+            .nav {
+                .nav-item {
+                    margin-top: $fs-1;
+                }
+            }
+        }
+    }
+}

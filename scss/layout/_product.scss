@@ -1,0 +1,169 @@
+.product {
+    padding-top: 100px;
+    .product__bottom {
+        .text {
+            .nav {
+                justify-content: center;
+                text-transform: uppercase;
+
+                .nav-link {
+                    padding: 0;
+                    background-color: none;
+                    margin: 0 $mg-3 + 5;
+                    letter-spacing: $letter-spacing-0 - 2;
+                    color: $color-gray-2;
+                    font-size: $fs-0 + 1;
+                    transition: 0.5s;
+                    &:hover {
+                        color: $color-black-1;
+                    }
+                }
+                .active {
+                    color: $color-black-1;
+                }
+            }
+        }
+        .tab-content {
+            margin-top: $mg-4;
+            .tab-pane {
+                display: flex;
+                flex-flow: row wrap;
+
+                .thumb {
+                    transition: all 0.5s;
+                    overflow: hidden;
+                    .owl-carousel {
+                        position: absolute;
+
+                        .owl-dots {
+                            position: absolute;
+                            right: 15px;
+                            bottom: 25px;
+                        }
+                    }
+                    &:hover {
+                        .hover__tab {
+                            z-index: 1000;
+                            opacity: 1;
+                            .action {
+                                transform: translateY(50%);
+                            }
+                            .description {
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                    width: 25%;
+                    img {
+                        width: 100%;
+                    }
+                    .product__hover {
+                        .action {
+                            a {
+                                color: $color-black-1;
+                            }
+                        }
+                        .description {
+                            h4 {
+                                a {
+                                    text-transform: uppercase;
+                                    @include yellowHover;
+                                    color: $color-black-0;
+                                    font-size: $fs-0 + 1;
+                                    letter-spacing: 4px;
+                                }
+                            }
+                            p {
+                                a {
+                                    @include yellowHover;
+                                    color: $color-gray-10;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    margin-bottom: 1px;
+    @include responsive("extra-large") {
+        .product__bottom {
+            .tab-content {
+                .tab-pane {
+                    .thumb {
+                        &:hover {
+                            .hover__tab {
+                                z-index: 1000;
+                                opacity: 1;
+                                .action {
+                                    transform: translateY(50%);
+                                }
+                                .description {
+                                    transform: translateY(-10%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .product__bottom {
+            .tab-content {
+                .tab-pane {
+                    .thumb {
+                        width: 33.3%;
+                        &:hover {
+                            .hover__tab {
+                                z-index: 1000;
+                                opacity: 1;
+                                .action {
+                                    transform: translateY(35%);
+                                }
+                                .description {
+                                    transform: translateY(-25%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .product__bottom {
+            .tab-content {
+                .tab-pane {
+                    .thumb {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("small") {
+        .product__bottom {
+            .tab-content {
+                .tab-pane {
+                    .thumb {
+                        &:hover {
+                            .hover__tab {
+                                z-index: 1000;
+                                opacity: 1;
+                                .action {
+                                    transform: translateY(10%);
+                                }
+                                .description {
+                                    transform: translateY(0%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

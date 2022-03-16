@@ -1,0 +1,29 @@
+.portfolioBanner {
+    .portfolioBanner__top {
+        display: flex;
+        justify-content: first baseline;
+        padding: $pd-1 + 10 0;
+        align-items: center;
+        text-transform: capitalize;
+        cursor: pointer;
+        transition: 0.3s;
+        .fa-th-large {
+            margin: 0 $mg-1;
+            color: $color-gray-11;
+            @include portfolioHover;
+        }
+        .arrow {
+            color: $color-gray-11;
+            @include portfolioHover;
+        }
+    }
+    .portfolioBanner__bottom{
+        img { 
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+    
+}

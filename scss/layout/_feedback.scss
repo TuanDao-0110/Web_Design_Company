@@ -1,0 +1,36 @@
+.feedback {
+    .feedback__content {
+        @include spaceBetweenDiv;
+        .feedback__carousel {
+            .item {
+                margin: $mg-1;
+                text-align: center;
+                .feedback__picture {
+                    width: 100px;
+                    height: auto;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: auto  ;
+                }
+                .feedback__content__1 { 
+                    
+                    margin-top: $mg-1;
+                    h2 { 
+                        margin-top: $mg-3;
+                        font-size: $fs-0  + 1;
+                        color: $color-black-1;
+                        text-transform: uppercase;
+                        font-size: 400;
+                        letter-spacing: 2px;
+                    }
+                    .light { 
+                        text-transform: uppercase;
+                        font-size: $fs-0 - 1;
+                        color: $color-gray-7;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.banner {
+    position: relative;
+    background-image: url(../img/index-banner-2.jpg);
+    height: 1230px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: cover;
+    .container-mid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .banner-title {
+            color: $color-white-0;
+            h1 {
+                letter-spacing: $letter-spacing-0;
+                font-size: $fs-2;
+                line-height: normal;
+                font-weight: $fw-2;
+            }
+            h3 {
+                letter-spacing: $letter-spacing-0 + 1;
+                font-size: $fs-1;
+            }
+        }
+    }
+}

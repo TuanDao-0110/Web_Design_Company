@@ -1,0 +1,75 @@
+.skill {
+    background: url(../img/skill.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    overflow: hidden;
+
+    .skill__content {
+        position: relative;
+        @include spaceBetweenDiv;
+        width: 100%;
+        .skill_overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            content: "";
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .skil__col {
+            color: $color-white-0;
+            padding: 0 $pd-1;
+            .skill__item_1 {
+                display: flex;
+                width: 100%;
+                height: 400px;
+                justify-content: center;
+                align-items: center;
+                h3 {
+                    font-size: $fs-3;
+                }
+            }
+            .skill__item_2 {
+                position: relative;
+                h4 {
+                    letter-spacing: $letter-spacing-0 -2;
+                    margin-bottom: $mg-0;
+                }
+                p {
+                    margin-bottom: $mg-1 - 4;
+                }
+                .relative__process {
+                    padding-top: $pd-1;
+                    .progress {
+                        background: $color-black-4;
+                        overflow: visible;
+                        height: 20px;
+                        margin-top: $mg-3;
+                        margin-bottom: $mg-4;
+                        font-weight: $fw-1;
+                        .progress-bar {
+                            text-transform: capitalize;
+                            color: $color-black-1;
+                            background-color: $color-white-0;
+                            position: relative;
+                            overflow: visible;
+                            box-sizing: border-box;
+                            padding-top: 0;
+                            padding-left: $pd-0;
+                            text-align: left;
+                            box-shadow: none;
+                            font-size: $fs-0 - 3;
+                            line-height: $lh-0 - 10;
+                            // white-space: nowrap;
+                            @include createPerce;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

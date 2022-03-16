@@ -1,0 +1,207 @@
+header {
+    height: 100px;
+    background-color: transparent;
+    padding: 0 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000000;
+    transition: 0.7s;
+    .header__cover {
+        text-transform: uppercase;
+        height: 100%;
+        // display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navbar {
+            .navbar-brand {
+                background-image: url(../img/logo-dark.png);
+                height: 100%;
+                background-size: contain;
+                width: 100px;
+                // background-position: ;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+            }
+            .header {
+                .navbar-toggler_1 {
+                    opacity: 0;
+                    padding: 0.25rem 0.75rem;
+                    font-size: 1.25rem;
+                    line-height: 1;
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 0.25rem;
+                    transition: box-shadow 0.15s ease-in-out;
+                    &:focus {
+                        box-shadow: 0;
+                    }
+                    i {
+                        color: white;
+                    }
+                }
+
+                .menu__header__drop {
+                    opacity: 0;
+                    width: 1%;
+                    overflow: hidden;
+                    .menu__drop_1 {
+                        width: 100%;
+                        .item__drop_1 {
+                            background-color: $color-white-0;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            border-bottom: 1px solid #f0f0f0;
+                            border-right: 1px solid #f0f0f0;
+                            border-left: 1px solid #f0f0f0;
+                            font-size: $fs-0;
+                            &:hover {
+                                a {
+                                    color: $color-yellow-0;
+                                }
+                                span {
+                                    color: $color-yellow-0;
+                                }
+                            }
+                            .active {
+                                color: $color-yellow-0;
+                            }
+                            a {
+                                line-height: 20px;
+                                color: $color-black-0;
+                                width: 90%;
+                                border-right: 1px solid #f0f0f0;
+                                padding: $pd-0 + 2 $pd-0 + 10;
+                            }
+                            span {
+                                width: 10%;
+                                text-align: center;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                height: 100%;
+                #navbarNav {
+                    // display: flex;
+                    justify-content: end;
+                    height: 100%;
+                    .navbar-nav {
+                        height: 100%;
+
+                        .nav-item {
+                            display: flex;
+                            height: 100%;
+                            align-items: center;
+                            &:hover {
+                                a {
+                                    color: $color-yellow-0;
+                                }
+                                .drop__down_1 {
+                                    display: block;
+                                }
+                            }
+                            .nav-link {
+                                &.active {
+                                    color: $color-yellow-0;
+                                }
+                                // @include yellowHover;
+                                padding: 0 $pd-0 + 2;
+                                outline: 0;
+                                font-weight: $fw-1;
+                                font-size: $fs-0;
+                                color: $color-white-0;
+                            }
+                            .drop__down_1 {
+                                display: none;
+                                position: absolute;
+                                padding: 0%;
+                                top: 100%;
+                                background-color: $color-white-0;
+                                box-shadow: 0 0px 2px rgba($color: #000000, $alpha: 0.4);
+                                li {
+                                    &:hover {
+                                        background-color: $color-yellow-0;
+                                        a {
+                                            color: $color-white-0;
+                                        }
+                                    }
+                                }
+                                .drop_right {
+                                    position: relative;
+                                    &:hover {
+                                        .drop_right_chil {
+                                            display: block;
+                                        }
+                                    }
+                                    .drop_right_chil {
+                                        padding: 0%;
+                                        position: absolute;
+                                        background-color: $color-white-0;
+
+                                        box-shadow: 0 0px 2px rgba($color: #000000, $alpha: 0.4);
+                                        left: 100%;
+                                        top: 10%;
+                                        display: none;
+                                        li {
+                                            a {
+                                                color: $color-black-1;
+                                            }
+                                            &:hover {
+                                                background-color: $color-yellow-0;
+                                                a {
+                                                    color: $color-white-0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                li {
+                                    transition: 0.3s;
+                                    cursor: pointer;
+                                    width: 180px;
+                                    padding: 8px 15px 10px 22px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    flex-wrap: nowrap;
+                                    // opacity: 0;
+
+                                    a {
+                                        align-items: center;
+                                        color: $color-black-1;
+                                        font-size: $fs-0 - 1;
+                                        // padding-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            height: 100%;
+            padding: 0;
+            margin: 0%;
+            position: relative;
+        }
+    }
+    @include responsive("large-1") {
+        .header__cover {
+            .navbar {
+                .header {
+                    .navbar-toggler_1 {
+                        opacity: 1;
+                    }
+                    .menu__header__drop {
+                        opacity: 1;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
